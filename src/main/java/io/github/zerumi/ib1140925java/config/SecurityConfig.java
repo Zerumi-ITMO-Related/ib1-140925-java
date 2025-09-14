@@ -2,6 +2,7 @@ package io.github.zerumi.ib1140925java.config;
 
 import io.github.zerumi.ib1140925java.security.JwtFilter;
 import io.github.zerumi.ib1140925java.security.JwtUtils;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,13 +12,12 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Configuration
+@AllArgsConstructor
 public class SecurityConfig {
 
-    @Autowired
-    private JwtUtils jwtUtils;
+    private final JwtUtils jwtUtils;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, UserDetailsService uds) throws Exception {

@@ -19,7 +19,7 @@ public class UsersConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+    public UserDetailsService userDetailsService() {
         var user = User.withUsername("user")
                 .password("$2y$10$I5JebtpUB6JTFRW0I5pycOmtGvsgji7/JBwwYqYGF7fcpOAlJPq6u")
                 .roles("USER")

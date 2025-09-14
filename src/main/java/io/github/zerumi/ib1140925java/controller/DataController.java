@@ -12,6 +12,7 @@ import java.util.List;
 @RequestMapping("/api/data")
 @RequiredArgsConstructor
 public class DataController {
+
     private final DataService service;
 
     @GetMapping

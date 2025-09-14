@@ -15,6 +15,7 @@ import java.util.stream.StreamSupport;
 @Service
 @RequiredArgsConstructor
 public class DataService {
+
     private final DataRepository repository;
     private final ModelMapper mapper;
 
